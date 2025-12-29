@@ -178,7 +178,7 @@ Acc1=Account(100000, 4941)
 
 while True:
 
-    print("\nWelcome to bank")
+    print("\nWelcome to Bank")
 
     print("Enter 1 to Deposit cash \nEnter 2 to withdraw cash\nEnter 3 to exit")
     Num=int(input("Input: "))
