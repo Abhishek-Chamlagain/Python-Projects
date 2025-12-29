@@ -62,3 +62,32 @@ which is always executed when the object is being initiated.'''
 
 # S2=Student("Rajiv Yadav",95)
 # print(S2.name, S2.Marks)
+
+
+"""Class and Instance attribute"""
+
+# class Student:
+#      college = "Padmashree College"  # Class Attribute
+#      name = "Shree"  # Class Attribute  (Here Object attribute > Class Attribute)
+
+#      def __init__(Self, name, Marks):
+#          Self.name = name   # Object attribute
+#          Self.Marks=Marks
+#          print("Adding new student in database....")
+
+
+# S1=Student("Abhishek Chamlagain", 90)
+# print(S1.name, S1.Marks)
+
+# S2=Student("Rajiv Yadav",95)
+# print(S2.name, S2.Marks)
+
+# print(Student.college)
+# print(S1.college)
+# print(S2.college)
+
+"""Note: Object attribute > Class attribute (Which is given in above example)"""
+
+
+"""Methods"""
+"""Methods are function that belong to objects"""
