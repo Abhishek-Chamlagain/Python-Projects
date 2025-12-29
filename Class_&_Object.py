@@ -91,3 +91,54 @@ which is always executed when the object is being initiated.'''
 
 """Methods"""
 """Methods are function that belong to objects"""
+
+# class Student:
+#     def __init__(self, name, marks):
+#         self.name=name
+#         self.marks=marks
+
+#     def display(self):
+#         print("Hello",self.name)
+
+#     def get_Marks(self):
+#         return self.marks
+
+# S1=Student("Abhishek", 89)
+# print(S1.name, S1.marks)
+# print(S1.get_Marks())
+
+"""Practice question"""
+
+"""Create student class that takes name and marks of 3 students as argument in constructor.
+ Then create a method to print the average"""
+
+# class Student:
+#     def __init__(self, name, marks):
+#         self.name=name
+#         self.marks=marks
+
+#     def get_Average(self):
+#         sum = 0
+#         for val in self.marks:
+#             sum+=val
+#         print("Student Name: ", self.name, "\nAverage marks: ", sum/3)
+
+# S1=Student("Abhishek Chamlagain", [80, 90, 78])
+# S1.get_Average()
+
+# """To change attriv=bute value"""
+# S1.name="Ironman"
+# S1.get_Average()
+
+"""Static Methods"""
+"""Methods that don't use the self parameter( Work at class level)"""
+# class student:
+#     @ staticmethod  #Decorator
+#     def college():
+#         print("Padmashree College")
+
+# S1=student()
+# S1.college()
+
+"""Decorators allows us to wrap another function in order to extend the 
+behaviour of the wrapped function, without permanently modifying it"""
