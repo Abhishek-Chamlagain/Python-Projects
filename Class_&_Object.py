@@ -25,18 +25,40 @@ This is also called object oriented programming."""
 which is always executed when the object is being initiated.'''
 
 "Creating class"
-class Student:
-    def __init__(Self, name, Marks):
-        Self.name = name
-        Self.Marks=Marks
-        print("Adding new student in database....")
+# class Student:
+#     def __init__(Self, name, Marks):
+#         Self.name = name
+#         Self.Marks=Marks
+#         print("Adding new student in database....")
 
 "Creating Object"
-S1=Student("Abhishek Chamlagain", 90)
-print(S1.name, S1.Marks)
+# S1=Student("Abhishek Chamlagain", 90)
+# print(S1.name, S1.Marks)
 
-S2=Student("Rajiv Yadav",95)
-print(S2.name, S2.Marks)
+# S2=Student("Rajiv Yadav",95)
+# print(S2.name, S2.Marks)
 
 """NOTE: The self parameter is a refrence to the current instance of the class,
  and is used to access variable that belongs to the class"""
+
+"""Types of Constructor"""
+
+"""1. Default Constructor (With no parameter)"""
+"""2. Parameterized Constructor (With Parameter)"""
+
+# class Student:
+
+#     def __init__(Self):  # Default Constructor
+#         pass
+
+#     def __init__(Self, name, Marks):  # Parameterized Constructor
+#         Self.name = name
+#         Self.Marks=Marks
+#         print("Adding new student in database....")
+
+
+# S1=Student("Abhishek Chamlagain", 90)
+# print(S1.name, S1.Marks)
+
+# S2=Student("Rajiv Yadav",95)
+# print(S2.name, S2.Marks)
