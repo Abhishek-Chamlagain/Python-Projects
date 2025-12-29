@@ -162,16 +162,19 @@ class Account:
         self.account_no=account_no
 
     def debit(self, amount):
-        self.balance-=amount
-        print("Rs.", amount,"was debitted")
-        print("In account: ",self.account_no," available amount is = ", self.get_Balance())
+        if amount > self.balance:
+            print("Insufficient balance")
+        else:
+            self.balance-=amount
+            print("Rs.", amount,"was debitted")
+            print("In account: ",self.account_no," available amount is = ", self.get_balance())
 
     def credit(self, amount):
         self.balance+=amount
         print("Rs.",amount,"was creditted")
-        print("In account: ",self.account_no," available amount is = ", self.get_Balance())
+        print("In account: ",self.account_no," available amount is = ", self.get_balance())
 
-    def get_Balance(self):
+    def get_balance(self):
         return self.balance
 
 Acc1=Account(100000, 4941)
@@ -186,12 +189,21 @@ while True:
     if Num==1:
         cre=int(input("Enter amount to deposit: "))
         Acc1.credit(cre)
+        choice = input("Do you want to continue? (y/n): ")
+        if choice.lower() != 'y':
+            break
+
     elif Num==2:
         deb=int(input("Enter amount to withdraw: "))
         Acc1.debit(deb)
+        choice = input("Do you want to continue? (y/n): ")
+        if choice.lower() != 'y':
+            break
+
     elif Num==3:
         print("\nThank you for banking with us...\nPlease visit again\n")
         break
+    
     else:
         print("Enter valid input.... Please try again\n")
         
