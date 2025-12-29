@@ -194,7 +194,7 @@ while True:
         break
     else:
         print("Enter valid input.... Please try again\n")
-        continue
+        
 
 
 
