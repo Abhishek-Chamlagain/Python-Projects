@@ -142,3 +142,65 @@ which is always executed when the object is being initiated.'''
 
 """Decorators allows us to wrap another function in order to extend the 
 behaviour of the wrapped function, without permanently modifying it"""
+
+"""Important Topic"""
+
+"""Abstraction
+ Hiding the implementation details of a class and only showing the essential features to the user"""
+
+"""Encapsulation
+Wrapping data and functions into a single unit (Object)"""
+
+"""Practice Question
+Create Account class with 2 attribute- Balance and account_no.
+create methods for debit, credit & printing the balance"""
+
+class Account:
+
+    def __init__(self, balance, account_no):
+        self.balance=balance
+        self.account_no=account_no
+
+    def debit(self, amount):
+        self.balance-=amount
+        print("Rs.", amount,"was debitted")
+        print("In account: ",self.account_no," available amount is = ", self.get_Balance())
+
+    def credit(self, amount):
+        self.balance+=amount
+        print("Rs.",amount,"was creditted")
+        print("In account: ",self.account_no," available amount is = ", self.get_Balance())
+
+    def get_Balance(self):
+        return self.balance
+
+Acc1=Account(100000, 4941)
+
+while True:
+
+    print("\nWelcome to bank")
+
+    print("Enter 1 to Deposit cash \nEnter 2 to withdraw cash\nEnter 3 to exit")
+    Num=int(input("Input: "))
+
+    if Num==1:
+        cre=int(input("Enter amount to deposit: "))
+        Acc1.credit(cre)
+    elif Num==2:
+        deb=int(input("Enter amount to withdraw: "))
+        Acc1.debit(deb)
+    elif Num==3:
+        print("\nThank you for banking with us...\nPlease visit again\n")
+        break
+    else:
+        print("Enter valid input.... Please try again\n")
+        continue
+
+
+
+
+
+
+
+
+
