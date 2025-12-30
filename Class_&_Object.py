@@ -155,58 +155,70 @@ Wrapping data and functions into a single unit (Object)"""
 Create Account class with 2 attribute- Balance and account_no.
 create methods for debit, credit & printing the balance"""
 
-class Account:
+# class Account:
 
-    def __init__(self, balance, account_no):
-        self.balance=balance
-        self.account_no=account_no
+#     def __init__(self, balance, account_no):
+#         self.balance=balance
+#         self.account_no=account_no
 
-    def debit(self, amount):
-        if amount > self.balance:
-            print("Insufficient balance")
-        else:
-            self.balance-=amount
-            print("Rs.", amount,"was debitted")
-            print("In account: ",self.account_no," available amount is = ", self.get_balance())
+#     def debit(self, amount):
+#         if amount > self.balance:
+#             print("Insufficient balance")
+#         else:
+#             self.balance-=amount
+#             print("Rs.", amount,"was debitted")
+#             print("In account: ",self.account_no," available amount is = ", self.get_balance())
 
-    def credit(self, amount):
-        self.balance+=amount
-        print("Rs.",amount,"was creditted")
-        print("In account: ",self.account_no," available amount is = ", self.get_balance())
+#     def credit(self, amount):
+#         self.balance+=amount
+#         print("Rs.",amount,"was creditted")
+#         print("In account: ",self.account_no," available amount is = ", self.get_balance())
 
-    def get_balance(self):
-        return self.balance
+#     def get_balance(self):
+#         return self.balance
 
-Acc1=Account(100000, 4941)
+# Acc1=Account(100000, 4941)
 
-while True:
+# while True:
 
-    print("\nWelcome to Bank")
+#     print("\nWelcome to Bank")
 
-    print("Enter 1 to Deposit cash \nEnter 2 to withdraw cash\nEnter 3 to exit")
-    Num=int(input("Input: "))
+#     print("Enter 1 to Deposit cash \nEnter 2 to withdraw cash\nEnter 3 to exit")
+#     Num=int(input("Input: "))
 
-    if Num==1:
-        cre=int(input("Enter amount to deposit: "))
-        Acc1.credit(cre)
-        choice = input("Do you want to continue? (y/n): ")
-        if choice.lower() != 'y':
-            break
+#     if Num==1:
+#         cre=int(input("Enter amount to deposit: "))
+#         Acc1.credit(cre)
+#         choice = input("Do you want to continue? (y/n): ")
+#         if choice.lower() != 'y':
+#             break
 
-    elif Num==2:
-        deb=int(input("Enter amount to withdraw: "))
-        Acc1.debit(deb)
-        choice = input("Do you want to continue? (y/n): ")
-        if choice.lower() != 'y':
-            break
+#     elif Num==2:
+#         deb=int(input("Enter amount to withdraw: "))
+#         Acc1.debit(deb)
+#         choice = input("Do you want to continue? (y/n): ")
+#         if choice.lower() != 'y':
+#             break
 
-    elif Num==3:
-        print("\nThank you for banking with us...\nPlease visit again\n")
-        break
+#     elif Num==3:
+#         print("\nThank you for banking with us...\nPlease visit again\n")
+#         break
     
-    else:
-        print("Enter valid input.... Please try again\n")
+#     else:
+#         print("Enter valid input.... Please try again\n")
+
+"""del Keyword
+It is used to delete object properties or object itself"""
+
+# class Student:
+#     def __init__(self, name):
+#         self.name=name
         
+# s1=Student("Abhishek")
+# print(s1.name)
+# del s1.name
+# print(s1.name)
+
 
 
 
