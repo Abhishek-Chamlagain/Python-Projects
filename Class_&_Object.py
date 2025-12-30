@@ -345,7 +345,49 @@ Super() method is used to access methods of the parent class"""
 # car1=ToyotaCar("Fortuner","Petrol")
 # print(car1.name)
 
+"""Class method
+A class method is bound to the class and receives the class as an implicit first argument.
+Note: Static method can't access or modify class state and generally for unity"""
 
+# class Person:
+#     name = "anonymus"
 
+#     """def changeName(self, name):
+#         # Person.name = name  #First way
+#         self.__class__.name ="Abhishek Chamlagain"  # Second Way
+#         """
+# # But here we use class method to access it
 
+#     @classmethod
+#     def changeName(cls, name):
+#         cls.name=name
+        
+# p1=Person()
+# p1.changeName("Abhishek")
+# print(p1.name)
+# print(Person.name)
 
+"""Note: Methods type
+static method
+class method (Cls)
+instance method (self)"""
+
+"""Property Decorator
+We use @property decorator on any method in 
+the class to use the method as a property"""
+
+class student:
+    def __init__(self, phy, chem, math):
+        self.phy=phy
+        self.chem=chem
+        self.math=math
+
+    @property
+    def percentage(self):
+        return str(( self.phy + self.chem + self.math)/3)+"%"
+    
+stu1=student(90, 95, 90)
+print(stu1.percentage)
+
+stu1.phy=76
+print(stu1.percentage)
