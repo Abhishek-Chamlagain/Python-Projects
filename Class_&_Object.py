@@ -220,8 +220,106 @@ It is used to delete object properties or object itself"""
 # print(s1.name)
 
 
+"""Private (like) attributes and methods
+
+Conceptual inheritance in Pytho 
+Private attribute and methods are meant to be used only 
+within the class and are not assible from outside the class"""
+
+"""To make private we use '__' symbol before attribute or methods"""
+
+# class Person:
+#     __name="Abhishek"
+
+#     def __hello(self):
+#         print("Hello ", self.__name)
+    
+#     def welcome(self):
+#         self.__hello()
+
+# P1=Person()
+# P1.welcome()
+
+"""Inheritance
+When one class (child/derived) derives the properties and method of another class (Parent/base)"""
+
+"""Example"""
+# class Car:
+#     color="Black"
+
+#     @staticmethod
+#     def start():
+#         print("Car started")
+
+#     @staticmethod
+#     def stop():
+#         print("Car stopped")
+
+# class ToyotaCar(Car):
+#     def __init__(self, name):
+#         self.name=name
+
+# car1=ToyotaCar("Fortuner")
+# car2=ToyotaCar("Prius")
+
+# print(car1.name)
+# car1.start()
+# print(car1.color)
+
+"""Types of inheritance
+
+1. Single inheritance (One child class derived from base calss ... same as example above)
+   One parent → one child"""
+# class Parent:
+#     def show(self):
+#         print("This is Parent class")
+
+# class Child(Parent):
+#     def display(self):
+#         print("This is Child class")
+
+# obj = Child()
+# obj.show()
+# obj.display()
 
 
+"""2. Multilevel inheritance (Grandparent → Parent → Child)"""
+# class GrandParent:
+#     def gp_method(self):
+#         print("Grand Parent class")
+
+# class Parent(GrandParent):
+#     def p_method(self):
+#         print("Parent class")
+
+# class Child(Parent):
+#     def c_method(self):
+#         print("Child class")
+
+# obj = Child()
+# obj.gp_method()
+# obj.p_method()
+# obj.c_method()
+
+
+""" Multiple Inheritance (One child → multiple parents)"""
+
+# class Father:
+#     def father_method(self):
+#         print("Father class")
+
+# class Mother:
+#     def mother_method(self):
+#         print("Mother class")
+
+# class Child(Father, Mother):
+#     def child_method(self):
+#         print("Child class")
+
+# obj = Child()
+# obj.father_method()
+# obj.mother_method()
+# obj.child_method()
 
 
 
