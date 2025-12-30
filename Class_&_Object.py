@@ -376,18 +376,76 @@ instance method (self)"""
 We use @property decorator on any method in 
 the class to use the method as a property"""
 
-class student:
-    def __init__(self, phy, chem, math):
-        self.phy=phy
-        self.chem=chem
-        self.math=math
+# class student:
+#     def __init__(self, phy, chem, math):
+#         self.phy=phy
+#         self.chem=chem
+#         self.math=math
 
-    @property
-    def percentage(self):
-        return str(( self.phy + self.chem + self.math)/3)+"%"
+#     @property
+#     def percentage(self):
+#         return str(( self.phy + self.chem + self.math)/3)+"%"
     
-stu1=student(90, 95, 90)
-print(stu1.percentage)
+# stu1=student(90, 95, 90)
+# print(stu1.percentage)
 
-stu1.phy=76
-print(stu1.percentage)
+# stu1.phy=76
+# print(stu1.percentage)
+
+
+"""Polymorphism: Operator overloading
+When the same poerator is allowed to have different meaning according to the context"""
+
+"""Dealing with complex number"""
+
+# class Number:
+#     def __init__(self, real, img):
+#         self.real=real
+#         self.img=img
+
+#     def shownumber(self):
+#         print(self.real,"i + ",self.img,"j")
+
+#     def add(self, num2):
+#         newReal= self.real + num2.real
+#         newImg= self.img + num2.img
+#         return Number(newReal, newImg)
+
+# Num1=Number(5,8)
+# Num1.shownumber()
+
+# Num2=Number(9,6)
+# Num2.shownumber()
+
+# num3=Num1.add(Num2)
+# num3.shownumber()
+
+
+# Now solving problem using DUNDER Function
+class Number:
+    def __init__(self, real, img):
+        self.real=real
+        self.img=img
+
+    def shownumber(self):
+        print(self.real,"i + ",self.img,"j")
+
+    def __add__(self, num2):
+        newReal= self.real + num2.real
+        newImg= self.img + num2.img
+        return Number(newReal, newImg)
+    
+    def __sub__(self, num2):
+        newReal= self.real - num2.real
+        newImg= self.img - num2.img
+        return Number(newReal, newImg)
+
+Num1=Number(5,8)
+Num1.shownumber()
+
+Num2=Number(9,6)
+Num2.shownumber()
+
+# num3=Num1 + Num2  #For aaddition
+num3=Num1 - Num2  # For subtraction
+num3.shownumber()
