@@ -321,6 +321,29 @@ When one class (child/derived) derives the properties and method of another clas
 # obj.mother_method()
 # obj.child_method()
 
+"""Super method()
+Super() method is used to access methods of the parent class"""
+
+# class car:
+#     def __init__(self, type):
+#         self.type=type
+
+#     @staticmethod
+#     def start():
+#         print("Engine start")
+
+#     @staticmethod
+#     def end():
+#         print("Engine stop")
+
+# class ToyotaCar(car):
+#     def __init__(self,name, type):
+#         super().__init__(type)
+#         self.name=name
+#         super().start()
+
+# car1=ToyotaCar("Fortuner","Petrol")
+# print(car1.name)
 
 
 
