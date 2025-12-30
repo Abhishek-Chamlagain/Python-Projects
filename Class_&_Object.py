@@ -421,31 +421,31 @@ When the same poerator is allowed to have different meaning according to the con
 # num3.shownumber()
 
 
-# Now solving problem using DUNDER Function
-class Number:
-    def __init__(self, real, img):
-        self.real=real
-        self.img=img
+''' Now solving problem using DUNDER Function'''
+# class Number:
+#     def __init__(self, real, img):
+#         self.real=real
+#         self.img=img
 
-    def shownumber(self):
-        print(self.real,"i + ",self.img,"j")
+#     def shownumber(self):
+#         print(self.real,"i + ",self.img,"j")
 
-    def __add__(self, num2):
-        newReal= self.real + num2.real
-        newImg= self.img + num2.img
-        return Number(newReal, newImg)
+#     def __add__(self, num2):
+#         newReal= self.real + num2.real
+#         newImg= self.img + num2.img
+#         return Number(newReal, newImg)
     
-    def __sub__(self, num2):
-        newReal= self.real - num2.real
-        newImg= self.img - num2.img
-        return Number(newReal, newImg)
+#     def __sub__(self, num2):
+#         newReal= self.real - num2.real
+#         newImg= self.img - num2.img
+#         return Number(newReal, newImg)
 
-Num1=Number(5,8)
-Num1.shownumber()
+# Num1=Number(5,8)
+# Num1.shownumber()
 
-Num2=Number(9,6)
-Num2.shownumber()
+# Num2=Number(9,6)
+# Num2.shownumber()
 
-# num3=Num1 + Num2  #For aaddition
-num3=Num1 - Num2  # For subtraction
-num3.shownumber()
+# # num3=Num1 + Num2  #For aaddition
+# num3=Num1 - Num2  # For subtraction
+# num3.shownumber()
