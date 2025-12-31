@@ -449,3 +449,67 @@ When the same poerator is allowed to have different meaning according to the con
 # # num3=Num1 + Num2  #For aaddition
 # num3=Num1 - Num2  # For subtraction
 # num3.shownumber()
+
+
+"""Practice Question"""
+
+"""1. Define a circle class to create a circle with radious r using the constructor. 
+      Define a Area() method of the class which calculates the area of the circle.
+      Define a Perimeter() method of the class which allows you to calculate the perimeter of the circle"""
+
+# class Circle:
+#     def __init__(self,radious):
+#         self.r=radious
+
+#     def Area(self):
+#        return (22/7)*self.r**2
+    
+#     def Perimeter(self):
+#         return 2*(22/7)*self.r
+    
+# inp=float(input("Enter radious of circle to find its 'Area' and 'Perimeter': "))
+# C1=Circle(inp)
+# print(C1.Area())
+# print(C1.Perimeter())
+
+"""2. Define a Employee class with attributes role, department, and salary. 
+      This class also has a showDetails()method. Create an Engineer class that inherits properties from 
+      Employee and has additional attributes: name & age"""
+
+# class Employee:
+#     def __init__(self, role, department, salary):
+#         self.role=role
+#         self.department=department
+#         self.salary=salary
+
+#     def showDetails(self):
+#         print("Role= ",self.role)
+#         print("Department= ",self.department)
+#         print("Salary= ",self.salary)
+    
+# class Engineer(Employee):
+#     def __init__(self, name, age):
+#          self.name=name
+#          self.age=age
+#          super().__init__("Project Manager", "IT", "100000")
+#          super().showDetails()
+
+# print("Enter 'Name' and 'Age' to find person role, department, salary")
+# inp=input("Enter name: ")
+# Ag=int(input("Enter Age: "))
+# Eng1=Engineer(inp, Ag)
+    
+"""Create a class called order which stores items and its price. Under dunder function __gt__() 
+to convey that Order1>Order2 if price of Order1>price of Order 2"""
+
+# class Order:
+#     def __init__(self, items, price):
+#         self.items=items
+#         self.price=price
+
+#     def __gt__(self, order2):
+#        return self.price>order2.price
+
+# order1=Order("Bugati",20)
+# order2=Order("Farari",15)
+# print(order1>order2)
